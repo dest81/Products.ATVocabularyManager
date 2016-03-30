@@ -22,6 +22,7 @@
 
         <p>
             <a class="context" href="createObject?type_name=SimpleVocabularyTerm"
+               tal:attributes="href string:${context/absolute_url}/${attrs/href}"
                i18n:translate="">Create New Vocabulary Term</a>
         </p>
 
@@ -69,7 +70,7 @@
                                        value python:context.translate(button['title'], domain='plone')" />
             </tal:block>
 
-	    <input tal:replace="structure context/@@authenticator/authenticator" />
+            <input tal:replace="structure context/@@authenticator/authenticator" />
 
             </form>
 
